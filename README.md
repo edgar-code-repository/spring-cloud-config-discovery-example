@@ -26,7 +26,7 @@ El servicio eureka recupera sus datos de configuración desde el servicio de con
 
 Es importante notar que el nombre del archivo application.properties fue modificado a bootstrap.properties.
 
-![Screenshot EurekaServiceConfiguration](screenshots/eureka-service-configuration.png.png)
+![Screenshot EurekaServiceConfiguration](screenshots/eureka-service-configuration.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ El servicio eureka se levanta correctamente en el puerto 9999:
 
 --------------------------------------------------------------------------------------------------------------------
 
-El servicio movies-info-service recupera sus datos de configuración desde el servicio de configuracion.
+El servicio movie-info-service recupera sus datos de configuración desde el servicio de configuracion.
 
 Es importante notar que el nombre del archivo application.properties fue modificado a bootstrap.properties.
 
@@ -50,19 +50,19 @@ Es importante notar que el nombre del archivo application.properties fue modific
 
 --------------------------------------------------------------------------------------------------------------------
 
-El servicio de configuración informa al servicio movies-info-service que debe correr en el puerto 5501:
+El servicio de configuración informa al servicio movie-info-service que debe correr en el puerto 5501:
 
 ![Screenshot ConfigServerMoviesService](screenshots/config-server-movies-service.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
-El servicio movies-info-service se levanta correctamente en el puerto 5501:
+El servicio movie-info-service se levanta correctamente en el puerto 5501:
 
 ![Screenshot MoviesService](screenshots/movies-service.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
-El servicio movies-info-service se auto registra en el servidor eureka:
+El servicio movie-info-service se auto registra en el servidor eureka:
 
 ![Screenshot EurekaInstancesRegistered](screenshots/eureka-instances-registered.png)
 
