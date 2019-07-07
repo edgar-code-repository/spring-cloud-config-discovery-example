@@ -56,10 +56,14 @@ public class ConfigServiceExampleApplication {
 
 **Ejecución**
 
-El servicio de configuración obtiene datos de configuracion desde repositorio git y 
-se levanta en el puerto 8888:
+Se informa al servicio eureka que debe correr en el puerto 9999:
 
-![Screenshot ConfigServerConfiguration](screenshots/config-server-configuration.png)
+![Screenshot ConfigServerEurekaService](screenshots/config-server-eureka-service.png)
+
+
+Se informa al servicio movie-info-service que debe correr en el puerto 5501:
+
+![Screenshot ConfigServerMoviesService](screenshots/config-server-movies-service.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -92,10 +96,6 @@ Es importante notar que el nombre del archivo application.properties fue modific
 En el archivo bootstrap.properties se define el nombre del servicio y la url del servicio de configuración.
 
 ![Screenshot EurekaServiceConfiguration](screenshots/eureka-service-configuration.png)
-
-El servicio de configuración informa a eureka que debe correr en el puerto 9999:
-
-![Screenshot ConfigServerEurekaService](screenshots/config-server-eureka-service.png)
 
 
 **Anotaciones**
@@ -153,10 +153,6 @@ El servicio recupera sus datos desde el servicio de configuración.
 Es importante notar que el nombre del archivo application.properties fue modificado a bootstrap.properties.
 
 ![Screenshot MovieInfoServiceConfiguration](screenshots/movie-info-service-configuration.png)
-
-El servicio de configuración informa al servicio movie-info-service que debe correr en el puerto 5501:
-
-![Screenshot ConfigServerMoviesService](screenshots/config-server-movies-service.png)
 
 
 **Anotaciones**
