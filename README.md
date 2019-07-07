@@ -4,19 +4,18 @@ SPRING CLOUD EXAMPLE WITH CONFIG SERVICE AND DISCOVERY SERVICE
 Microservicios de ejemplo, desarrollados con Spring Boot y Spring Cloud, que levantan un config service, 
 un discovery service y un servicio cliente que hace uso de los otros dos servicios.
 
-Config Service: este servicio levanta datos desde un repositorio GIT.
+**Config Service:** este servicio levanta datos desde un repositorio GIT.
 
   https://github.com/edgar-code-repository/config-discovery-repository-example
 
-Eureka Service: este discovery service levanta su configuración desde el Config Service.
+**Eureka Service:** este discovery service levanta su configuración desde el Config Service.
 
-Movie Info Service: este servicio contiene un Rest Controller que retorna información de peliculas.
-Se conecta al servicio de configuracion para obtener sus datos de configuración y se registra automáticamente
-con el servicio eureka. 
+**Movie Info Service:** este servicio contiene un Rest Controller que retorna información de películas.
+Se conecta al servicio de configuración para obtener sus datos y se registra automáticamente con el servicio eureka. 
 
 --------------------------------------------------------------------------------------------------------------------
 
-**Servicio de configuracion**
+**Servicio de configuración**
 
 **Dependencias**
 
@@ -39,7 +38,7 @@ desde un repositorio git:
 
 **Anotaciones**
 
-La anotacion @EnableConfigServer permite que el servicio actue como un servicio de configuración:
+La anotación @EnableConfigServer permite que el servicio actue como un servicio de configuración:
 
 ```
 
@@ -55,9 +54,9 @@ public class ConfigServiceExampleApplication {
 
 ```
 
-**Ejecucion**
+**Ejecución**
 
-El servicio de configuracion obtiene datos de configuracion desde repositorio git y 
+El servicio de configuración obtiene datos de configuracion desde repositorio git y 
 se levanta en el puerto 8888:
 
 ![Screenshot ConfigServerConfiguration](screenshots/config-server-configuration.png)
@@ -68,7 +67,7 @@ se levanta en el puerto 8888:
 
 **Dependencias**
 
-El servicio eureka recupera sus datos desde el servicio de configuracion, para lo cual,
+El servicio eureka recupera sus datos desde el servicio de configuración, para lo cual,
 utiliza la dependencia "spring-cloud-starter-config".
 
 Para correr como un servicio de discovery se requiere la dependencia "spring-cloud-starter-netflix-eureka-server".
@@ -101,7 +100,7 @@ El servicio de configuración informa a eureka que debe correr en el puerto 9999
 
 **Anotaciones**
 
-La anotacion @EnableEurekaServer permite que el servicio actue como un servicio de discovery:
+La anotación @EnableEurekaServer permite que el servicio actue como un servicio de discovery:
 
 ```
 
@@ -117,7 +116,7 @@ public class EurekaServiceApplication {
 
 ```
 
-**Ejecucion**
+**Ejecución**
 
 El servicio eureka se levanta correctamente en el puerto 9999:
 
@@ -162,7 +161,7 @@ El servicio de configuración informa al servicio movie-info-service que debe co
 
 **Anotaciones**
 
-La anotacion @EnableEurekaClient permite que el servicio actue como un cliente del servicio de discovery:
+La anotación @EnableEurekaClient permite que el servicio actue como un cliente del servicio de discovery:
 
 ```
 
@@ -178,7 +177,7 @@ public class MovieInfoServiceApplication {
 
 ```
 
-**Ejecucion**
+**Ejecución**
 
 El servicio se levanta correctamente en el puerto 5501:
 
